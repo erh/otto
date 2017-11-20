@@ -6621,6 +6621,8 @@ func toValue_float64(value float64) Value {
 }
 
 func toValue_string(value string) Value {
+	checkString(value)
+	
 	return Value{
 		kind:  valueString,
 		value: value,
